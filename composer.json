@@ -1,0 +1,12 @@
+{
+    "name": "mikhail/notespro",
+    "description": "notes",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Max\\NotesPro\\": "src/"
+        }
+    }
+}
