@@ -14,7 +14,7 @@ class IndexController extends Controller
     }
 
     public function indexAction(){
-        session_start();
+        //session_start();
         $content='main.php';
         $template='template.php';
         //$pictures = $this->notesRepository->getAll();

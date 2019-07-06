@@ -13,6 +13,7 @@ class Router
     $action = 'index';
     $routes = explode('/', $_SERVER['REQUEST_URI']);
     $params = null;
+    //var_dump($routes);
 
     // имя класса контроллера
     if (!empty($routes[1])){
@@ -30,6 +31,7 @@ class Router
     $controller= 'Max\NotesPro\Controllers\\' . ucfirst(strtolower($controller)).'Controller'; // формируем имя класса контроллера
     $action=strtolower($action).'Action'; // формируем имя метода
     //var_dump($controller);
+    //var_dump($action);
     if (!class_exists($controller)){
         //Router::ErrorPage404();
         echo 'Класс не найден';
