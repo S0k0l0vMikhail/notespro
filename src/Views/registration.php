@@ -44,4 +44,4 @@
   </form>
 </div>
 </div>
-<script type="text/javascript" src="js/validate.js"></script>
+<script src="/js/validate.js"></script>

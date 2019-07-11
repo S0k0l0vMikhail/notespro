@@ -60,7 +60,7 @@
       regAccess();
     }
 
-    rules.onfocus = regAccess();
+    //rules.onfocus = regAccess();
 
     function regAccess() {
       if (!(flag1 == true && flag2 == true && flag3 == true && flag4 == true)) {
