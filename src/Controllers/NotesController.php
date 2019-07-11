@@ -18,14 +18,14 @@ class NotesController extends Controller
   }
 
   public function indexAction(){
-      //session_start();
+      session_start();
       $content='addnotes.php';
       $template='template.php';
       //$pictures = $this->notesRepository->getAll();
       $data=[
           'title'=>'Новая заметка',
-          //'pictures' => 'pictures',
-          //'auth' => isset($_SESSION['name'])
+          'name' => $_SESSION['name'],
+          'auth' => isset($_SESSION['name'])
       ];
 
       echo $this->renderPage($content,$template,$data);

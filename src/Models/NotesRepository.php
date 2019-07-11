@@ -10,7 +10,7 @@ class NotesRepository implements Repository
     private $db;
     public function __construct()
     {
-        //$this->db = DB::getDB();
+        $this->db = DB::getDB();
     }
 
     public function getAll()
@@ -30,9 +30,9 @@ class NotesRepository implements Repository
 
     public function save($params)
     {
-        $sql = 'INSERT INTO 
-                (title, description, img, yearCreated)
-                VALUES (:title, :description, :img, :yearCreated)';
+        $sql = 'INSERT INTO
+                (title, description, date)
+                VALUES (:title, :description, :date)';
         return $this->db->nonSelectQuery($sql, $params);
     }
 

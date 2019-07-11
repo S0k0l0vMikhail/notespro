@@ -1,7 +1,7 @@
 <?php
-namespace Max\FrontController\Models;
-use Max\FrontController\Core\DB;
-use Max\FrontController\Core\Repository;
+namespace Max\NotesPro\Models;
+use Max\NotesPro\Core\DB;
+use Max\NotesPro\Core\Repository;
 
 class UserRepository implements Repository
 {
@@ -21,8 +21,8 @@ class UserRepository implements Repository
 
     public function save($params)
     {
-        $sql = 'INSERT INTO user (email, `name`, hash, phone, role)
-                VALUES (:email, :username, :hash, :phone, :role)';
+        $sql = 'INSERT INTO user (email, `name`, hash, role)
+                VALUES (:email, :username, :hash, :role)';
         return $this->db->nonSelectQuery($sql, $params);
     }
 

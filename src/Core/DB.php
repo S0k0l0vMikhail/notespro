@@ -1,11 +1,11 @@
 <?php
-namespace Max\FrontController\Core;
+namespace Max\NotesPro\Core;
 
 
 class DB
 {
     private $server = 'localhost';
-    private $dbName = 'frontcontroller';
+    private $dbName = 'notespro';
     private $username = 'root';
     private $pwd = '';
 

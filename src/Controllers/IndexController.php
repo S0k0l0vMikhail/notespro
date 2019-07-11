@@ -14,13 +14,14 @@ class IndexController extends Controller
     }
 
     public function indexAction(){
-        //session_start();
+        session_start();
         $content='main.php';
         $template='template.php';
         //$pictures = $this->notesRepository->getAll();
+
         $data=[
             'title'=>'Главная',
-            'pictures' => 'pictures',
+            'notes' => 'notes',
             'auth' => isset($_SESSION['name'])
         ];
 
