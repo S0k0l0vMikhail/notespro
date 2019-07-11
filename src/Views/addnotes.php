@@ -1,1 +1,5 @@
-<h2>форма добавления заметки</h2>
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+
+  </div>
+</div>

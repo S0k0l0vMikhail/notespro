@@ -26,7 +26,7 @@
           </div>
         </div>
         <p class="hint" id="hint"><input type="checkbox" id="rules" name="rules">  С <a href="/">правилами</a> сайта ознакомлен и согласен.</p>
-        <button type="submit" class="btn btn-secondary" id="register" >Зарегистрироваться</button>
+        <button type="submit" class="btn btn-secondary" id="register" disabled>Зарегистрироваться</button>
     </form>
 </div>
 <div class="col-md-auto"></div>
