@@ -1,4 +1,4 @@
-    let name = document.getElementById('name');
+let name = document.getElementById('name');
     let email = document.getElementById('email');
     let password = document.getElementById('password');
     let password2 = document.getElementById('password2');
@@ -45,8 +45,8 @@
         console.log('no');
         flag3 = false;
       }
-      regAccess();
       notes.setAttribute("hidden", "true");
+      regAccess();
     }
 
     password2.onblur = function () {
@@ -60,12 +60,12 @@
       regAccess();
     }
 
-    //rules.onfocus = regAccess();
+    rules.onfocus = regAccess();
 
     function regAccess() {
       if (!(flag1 == true && flag2 == true && flag3 == true && flag4 == true)) {
         console.log('setAttribute');
-        register.setAttribute("disabled");
+        (!register.hasAttribute("disabled")) ? register.setAttribute("disabled") : false;
       } else {
         console.log('removeAttribute');
         register.removeAttribute("disabled");

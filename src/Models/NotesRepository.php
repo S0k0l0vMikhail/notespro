@@ -16,23 +16,23 @@ class NotesRepository implements Repository
     public function getAll()
     {
         // возвращает все картины
-        $sql = 'SELECT * FROM ';
+        $sql = 'SELECT * FROM notes';
         return $this->db->getAll($sql);
     }
 
     public function getById(int $id)
     {
         // получаем картину по id
-        $sql = 'SELECT * FROM  WHERE id=:id';
+        $sql = 'SELECT * FROM notes WHERE id=:id';
         $params = ['id'=>$id];
         return $this->db->paramsGetOne($sql, $params);
     }
 
     public function save($params)
     {
-        $sql = 'INSERT INTO
-                (title, description, date)
-                VALUES (:title, :description, :date)';
+        $sql = 'INSERT INTO notes
+                (title, description, date, user_id)
+                VALUES (:title, :description, :date, :user_id)';
         return $this->db->nonSelectQuery($sql, $params);
     }
 

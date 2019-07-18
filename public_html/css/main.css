@@ -1,9 +1,25 @@
 /* @import url("grid.css"); */
- @import url("reset.css"); */
+ @import url("reset.css");
 
-$brand-color1: #ff0000;
-$brand-color2: inherit;
+/* $brand-color1: #ff0000;
+$brand-color2: inherit; */
+.note {
+  background: lightgray;
+  margin-left: 10px;
+  border-radius: 8px;
+  padding-bottom: 5px;
+}
 
+.note:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.hint {
+  font-size: 15px;
+  color: gray;
+}
 
 .grid {
   display: grid;

@@ -17,12 +17,13 @@ class IndexController extends Controller
         session_start();
         $content='main.php';
         $template='template.php';
-        //$pictures = $this->notesRepository->getAll();
+        $notes = $this->notesRepository->getAll();
 
         $data=[
             'title'=>'Главная',
-            'notes' => 'notes',
-            'auth' => isset($_SESSION['name'])
+            'notes' => $notes,
+            'auth' => isset($_SESSION['name']),
+            'id' => isset($_SESSION['id'])
         ];
 
         echo $this->renderPage($content,$template,$data);

@@ -58,12 +58,12 @@ class AccountController extends Controller
   public function indexAction(){
       session_start();
       if(!isset($_SESSION['name'])) header('Location: /');
-      $accountPage = ($_SESSION['role'] == 'ADMIN') ? 'admin_account.php'
-                                              : 'user_account.php';
+      $accountPage = ($_SESSION['role'] == 'ADMIN') ? 'admin_account.php' : 'user_account.php';
       $data = [
           'title' => 'Личный кабинет',
           'name' => $_SESSION['name'],
-          'auth' => isset($_SESSION['name'])
+          'auth' => isset($_SESSION['name']),
+          'id' => isset($_SESSION['id'])
       ];
 
       echo $this->renderPage($accountPage, 'template.php', $data);
