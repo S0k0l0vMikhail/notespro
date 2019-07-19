@@ -50,7 +50,23 @@ class DB
         $statement = $this->connection->prepare($sql);
         if (!$statement) return false;
         $statement->execute($params);
-//        $statement->setFetchMode(\PDO::FETCH_CLASS, $class);
         return $statement->fetch(\PDO::FETCH_ASSOC);
+        //print_r($statement->fetch(\PDO::FETCH_ASSOC));
     }
+
+    // public function update($sql, $title, $comment, $id)
+    // {
+    //   $statement = $this->connection->prepare($sql);
+    //   if (!$statement) return false;
+    //   $statement->bindParam(':title', $title);
+    //   $statement->bindParam(':description', $comment);
+    //   $statement->bindParam(':id', $id);
+    //   $statement->execute();
+    //   return $statement->fetch(\PDO::FETCH_ASSOC);
+    // }
+
+    // public function delete($id)
+    // {
+    //   // code...
+    // }
 }

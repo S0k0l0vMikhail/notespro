@@ -36,4 +36,24 @@ class NotesRepository implements Repository
         return $this->db->nonSelectQuery($sql, $params);
     }
 
+    public function delete($id)
+    {
+      $sql = 'DELETE FROM notes WHERE id = :id';
+      $params = ['id'=>$id];
+      return $this->db->nonSelectQuery($sql, $params);
+    }
+
+    public function update($title, $comment, $id)
+    {
+      $sql = 'UPDATE notes SET title = :title, description = :description WHERE id = :id';
+      $params = [
+        'id'=>$id,
+        'title'=> $title,
+        'description' =>$comment
+    ];
+      return $this->db->nonSelectQuery($sql, $params);
+      //print_r($this->db->nonSelectQuery($sql, $params));
+    }
+
+
 }

@@ -7,7 +7,7 @@
         </div>
         <div class="form-group">
             <textarea class="form-control" name="comment" cols="40" rows="15" required></textarea>
-            <p class="hint" id="private"><input type="checkbox" id="private" checked>Приватная заметка</p>
+            <!-- <p class="hint" id="private"><input type="checkbox" id="private" checked>Приватная заметка</p> -->
         </div>
         <button type="submit" class="btn btn-secondary" >Добавить</button>
     </form>

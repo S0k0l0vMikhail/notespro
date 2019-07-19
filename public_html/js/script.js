@@ -1,8 +1,11 @@
 let note = document.querySelectorAll('div.note');
-console.log(note);
+//console.log(typeof(note));
 
-note.addEventListener('click', openNote());
+for (let i = 0; i < note.length; i++) {
+    note[i].addEventListener('click', openNote);
 
-function openNote() {
-  console.log('ok');
+  function openNote() {
+    console.log(this.getAttribute("id"));
+    
+  }
 }

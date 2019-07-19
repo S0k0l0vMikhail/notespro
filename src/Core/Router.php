@@ -27,7 +27,7 @@ class Router
     if (!empty($routes[3])){
         $params=$routes[3];
     }
-    //var_dump($controller);
+    //var_dump($params);
     $controller= 'Max\NotesPro\Controllers\\' . ucfirst(strtolower($controller)).'Controller'; // формируем имя класса контроллера
     $action=strtolower($action).'Action'; // формируем имя метода
     //var_dump($controller);

@@ -15,6 +15,7 @@ class IndexController extends Controller
 
     public function indexAction(){
         session_start();
+        if (isset($_SESSION['name'])) {
         $content='main.php';
         $template='template.php';
         $notes = $this->notesRepository->getAll();
@@ -25,6 +26,13 @@ class IndexController extends Controller
             'auth' => isset($_SESSION['name']),
             'id' => isset($_SESSION['id'])
         ];
+      } else {
+        $content='registration.php';
+        $template='template.php';
+        $data =[
+            'title'=>'Регистрация',
+        ];
+      }
 
         echo $this->renderPage($content,$template,$data);
     }
